@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* display items with flex and center vertically & horizontally */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* container properties + arrage items vertically */
+.vertical-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.justify-space-around {
+    justify-content: space-evenly;
+}
+
+#main-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* styles for the audio container */
+#audio-container {
+    height: 300px;
+    width: 1000px;
+    background-color: blueviolet;
+    margin-top: 10px;
+}
+
+/* cover image height and width */
+#cover-img {
+    height: 200px;
+    width: 200px;
+}
