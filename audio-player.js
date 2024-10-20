@@ -15,7 +15,7 @@ const progressText = document.getElementById("progress-text");
 const durationText = document.getElementById("duration-text");
 
 // audioPlayer.src is the first song of the audio player by default
-audioPlayer.src = "assets/sound/allthethingsshesaid.mp3";
+audioPlayer.src = "/assests/songs/attss.mp3";
 audioPlayer.volume = 0.5;
 
 //playing stores if the audioPlayer is currently playing
