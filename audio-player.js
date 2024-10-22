@@ -15,14 +15,14 @@ const progressText = document.getElementById("progress-text");
 const durationText = document.getElementById("duration-text");
 
 // song source
-const songSource = ["/assests/songs/pokemon-theme-1.mp3","/assests/songs/pokemon-theme-2.mp3", "/assests/songs/pokemon-theme-3.mp3"];
+const songSource = ["/assests/songs/pokemon-theme-1.mp3", "/assests/songs/pokemon-theme-2.mp3", "/assests/songs/pokemon-theme-3.mp3"];
 
 // define text for song of choice
 const songName = ["Gotta Catch 'Em all!", "Adventures in the Orange Islands by Pokemon", "The Johto Journeys by Pokemon"];
 
 // image sources
 const songImageSource = ["/assests/images/theme-1.jpg", "/assests/images/theme-2.jpg", "/assests/images/theme-3.jpg"]
-const coverImage =  document.getElementById("cover-img");
+const coverImage = document.getElementById("cover-img");
 
 // define html element constants - song selection
 const nextButton = document.getElementById("next-button");
@@ -33,7 +33,7 @@ const songText = document.getElementById("song-text");
 audioPlayer.src = "/assests/songs/pokemon-theme-1.mp3";
 audioPlayer.volume = 0.5;
 
-//playing stores if the audioPlayer is currently playing
+//playing stop if the audioPlayer is currently playing
 let playing = false;
 
 //updatingProgress stores if the user is updating the progress in the progressBar
@@ -80,10 +80,7 @@ function onTimeUpdate() {
  * onEnd resets all necessary values for song to start playing again
  */
 function onEnd() {
-  progressSlider.value = 0;
-  playPauseButton.innerHTML = "Play";
-  playing = false;
-  progressText.innerHTML = "00:00";
+  clickNextFunction();
 }
 
 /**
@@ -127,7 +124,7 @@ function secondsToMMSS(seconds) {
   return MM + ":" + SS;
 }
 
-// store which character is currently being displayed
+// store which song is currently being displayed
 let songCounter = 1;
 
 /**
@@ -136,7 +133,7 @@ let songCounter = 1;
  * @returns when character is chosen
  */
 
-function clickFunction() {
+function clickNextFunction() {
   // update character counter
   songCounter = songCounter + 1;
 
@@ -145,13 +142,34 @@ function clickFunction() {
     songCounter = 1;
   }
 
+  updateFunction();
+}
 
+function clickPreviousFunction() {
+  // update character counter
+  songCounter = songCounter - 1;
+
+  // if beyond 3 -> set character counter to 1
+  if (songCounter < 1) {
+    songCounter = 3;
+  }
+
+  updateFunction();
+}
+
+function updateFunction() {
   // find image related to specific character
   // Images are 0,1,2 so image sources -1 to each character counter to select correct image
   coverImage.src = songImageSource[songCounter - 1];
   songText.innerHTML = songName[songCounter - 1];
   audioPlayer.src = songSource[songCounter - 1];
+
+  if (playing) {
+    audioPlayer.play();
+  }
 }
+
+
 
 //play pause button events
 playPauseButton.onclick = onPlayPauseClick;
@@ -170,5 +188,5 @@ progressSlider.onmousedown = onProgressMouseDown;
 
 
 // Assignment area for functions
-nextButton.onclick = clickFunction;
-previousButton.onclick = clickFunction;
+nextButton.onclick = clickNextFunction;
+previousButton.onclick = clickPreviousFunction;
