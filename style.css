@@ -22,17 +22,26 @@
     justify-content: space-evenly;
   }
   
+#title-style {
+  font-size: 70px;
+  font-family: 'Pokemon Solid', sans-serif;
+  color: #3b4cca;
+}
+
   #main-container {
     width: 100vw;
     height: 100vh;
+    background-color: #ffde00;
+ 
   }
   
   /* stiles for the audio container player */
   #audio-container {
-    height: 300px;
+    height: 600px;
     width: 1000px;
-    background-color: beige;
+    background-color: #ffde00;
     margin-top: 10px;
+    border: black solid 4px;
   }
   
   /* cover image height and width */

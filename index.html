@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/audio-player.js" defer></script>
-    <title>STRUGGLING</title>
-  </head>
-  <body>
-    <!-- main container div -->
-    <div id="main-container" class="vertical-container">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+  <script src="/audio-player.js" defer></script>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+  </style>
+  <title>STRUGGLING</title>
+</head>
+
+<body>
+  <!-- main container div -->
+  <div id="main-container" class="vertical-container">
+
+
+    <!-- audio player container -->
+    <div id="audio-container" class="vertical-container justify-space-around">
       <!-- audio player title -->
-      <h1>My Audio Player!</h1>
+      <h1 id="title-style">Pokemon Theme Song Player!</h1>
+      <!-- song name & artist -->
+      <p id="song-text">
+        <span>Gotta Catch ’Em All!</span>
+        <span> by </span>
+        <span>Pokemon</span>
+      </p>
 
-      <!-- audio player container -->
-      <div id="audio-container" class="vertical-container justify-space-around">
-        <!-- song name & artist -->
-        <p>
-          <span>All The Things She Said</span>
-          <span> by </span>
-          <span>tATu</span>
-        </p>
-
-        <!-- volume + play, previous, next buttons + image cover container  -->
-        <div class="container justify-space-around">
-          <!-- volume -->
-          <div class="container">
-            <input id="volume-slider" type="range" min="0" max="100" />
-          </div>
-
-          <!-- play, previous, next buttons -->
-          <div id="container">
-            <button>Previous</button>
-            <button id="play-button">Play</button>
-            <button>Next</button>
-          </div>
-
-          <!-- image cover -->
-          <img id="cover-img" src="/assests/images/tattu.jpg" />
-        </div>
-
-        <!-- Progress of song display -->
+      <!-- volume + play, previous, next buttons + image cover container  -->
+      <div class="container justify-space-around">
+        <!-- volume -->
         <div class="container">
-          <p>
-            <span id="progress-text">00:00</span> /
-            <span id="duration-text">00:00</span>
-          </p>
-          <input id="progress-slider" type="range" value="0" />
+          <input id="volume-slider" type="range" min="0" max="100" />
         </div>
+
+        <!-- play, previous, next buttons -->
+        <div id="container">
+          <button id="previous-button">Previous</button>
+          <button id="play-button">Play</button>
+          <button id="next-button">Next</button>
+        </div>
+
+        <!-- image cover -->
+        <img id="cover-img" src="/assests/images/theme-1.jpg" />
+      </div>
+
+      <!-- Progress of song display -->
+      <div class="container">
+        <p>
+          <span id="progress-text">00:00</span> /
+          <span id="duration-text">00:00</span>
+        </p>
+        <input id="progress-slider" type="range" value="0" />
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

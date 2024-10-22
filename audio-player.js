@@ -14,8 +14,23 @@ const volumeSlider = document.getElementById("volume-slider");
 const progressText = document.getElementById("progress-text");
 const durationText = document.getElementById("duration-text");
 
+// song source
+const songSource = ["/assests/songs/pokemon-theme-1.mp3","/assests/songs/pokemon-theme-2.mp3", "/assests/songs/pokemon-theme-3.mp3"];
+
+// define text for song of choice
+const songName = ["Gotta Catch 'Em all!", "Adventures in the Orange Islands by Pokemon", "The Johto Journeys by Pokemon"];
+
+// image sources
+const songImageSource = ["/assests/images/theme-1.jpg", "/assests/images/theme-2.jpg", "/assests/images/theme-3.jpg"]
+const coverImage =  document.getElementById("cover-img");
+
+// define html element constants - song selection
+const nextButton = document.getElementById("next-button");
+const previousButton = document.getElementById("previous-button");
+const songText = document.getElementById("song-text");
+
 // audioPlayer.src is the first song of the audio player by default
-audioPlayer.src = "/assests/songs/attss.mp3";
+audioPlayer.src = "/assests/songs/pokemon-theme-1.mp3";
 audioPlayer.volume = 0.5;
 
 //playing stores if the audioPlayer is currently playing
@@ -112,6 +127,32 @@ function secondsToMMSS(seconds) {
   return MM + ":" + SS;
 }
 
+// store which character is currently being displayed
+let songCounter = 1;
+
+/**
+ * Update character counter and display next character.
+ * Sets counter back to 1 if 3 has been surpassed.
+ * @returns when character is chosen
+ */
+
+function clickFunction() {
+  // update character counter
+  songCounter = songCounter + 1;
+
+  // if beyond 3 -> set character counter to 1
+  if (songCounter > 3) {
+    songCounter = 1;
+  }
+
+
+  // find image related to specific character
+  // Images are 0,1,2 so image sources -1 to each character counter to select correct image
+  coverImage.src = songImageSource[songCounter - 1];
+  songText.innerHTML = songName[songCounter - 1];
+  audioPlayer.src = songSource[songCounter - 1];
+}
+
 //play pause button events
 playPauseButton.onclick = onPlayPauseClick;
 
@@ -126,3 +167,8 @@ volumeSlider.onchange = onVolumeSliderChange;
 // progress slider events
 progressSlider.onchange = onProgressSliderChange;
 progressSlider.onmousedown = onProgressMouseDown;
+
+
+// Assignment area for functions
+nextButton.onclick = clickFunction;
+previousButton.onclick = clickFunction;
