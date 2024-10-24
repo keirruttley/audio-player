@@ -26,6 +26,11 @@ function onDragStart(event) {
     draggedImage = event.target;
     const style = window.getComputedStyle(draggedImage);
 
+    if(sliderIsChanging) {
+        event.preventDefault();
+        return;
+    }
+
     offsetX = event.clientX - parseInt(style.left);
     offsetY = event.clientY - parseInt(style.top);
 }

@@ -18,7 +18,7 @@ const durationText = document.getElementById("duration-text");
 const songSource = ["/assests/songs/pokemon-theme-1.mp3", "/assests/songs/pokemon-theme-2.mp3", "/assests/songs/pokemon-theme-3.mp3"];
 
 // define text for song of choice
-const songName = ["Gotta Catch 'Em all!", "Adventures in the Orange Islands by Pokemon", "The Johto Journeys by Pokemon"];
+const songName = ["Gotta Catch 'Em all! by Pokemon", "Adventures in the Orange Islands by Pokemon", "The Johto Journeys by Pokemon"];
 
 // image sources
 const songImageSource = ["/assests/images/theme-1.jpg", "/assests/images/theme-2.jpg", "/assests/images/theme-3.jpg"]
@@ -29,6 +29,25 @@ const nextButton = document.getElementById("next-button");
 const previousButton = document.getElementById("previous-button");
 const songText = document.getElementById("song-text");
 
+// all information about songs - using objects instead of arrays
+const songsInfo = [
+  {
+    audioSource: "/assests/songs/pokemon-theme-1.mp3",
+    title: "Gotta Catch 'Em all!",
+    imageSource: "/assests/images/theme-1.jpg",
+  },
+  {
+    audioSource: "/assests/songs/pokemon-theme-2.mp3",
+    title: "Adventures in the Orange Islands by Pokemon",
+    imageSource: "/assests/images/theme-2.jpg",
+  },
+  {
+    audioSource: "/assests/songs/pokemon-theme-3.mp3",
+    title: "The Johto Journeys by Pokemon",
+    imageSource: "/assests/images/theme-3.jpg",
+  }
+]
+
 // audioPlayer.src is the first song of the audio player by default
 audioPlayer.src = "/assests/songs/pokemon-theme-1.mp3";
 audioPlayer.volume = 0.5;
@@ -38,6 +57,10 @@ let playing = false;
 
 //updatingProgress stores if the user is updating the progress in the progressBar
 let updatingProgress = false;
+
+// store whether any of the sliders is changing
+let sliderIsChanging = false;
+
 
 /**
  * if audio player is playing -> do not play sound
@@ -88,6 +111,11 @@ function onEnd() {
  */
 function onVolumeSliderChange() {
   audioPlayer.volume = volumeSlider.value * 0.01;
+  sliderIsChanging = false;
+}
+
+function onVolumeMousedown() {
+  sliderIsChanging = true;
 }
 
 /**
@@ -95,6 +123,7 @@ function onVolumeSliderChange() {
  */
 function onProgressMouseDown() {
   updatingProgress = true;
+  sliderIsChanging = true;
 }
 
 /**
@@ -105,6 +134,7 @@ function onProgressMouseDown() {
 function onProgressSliderChange() {
   audioPlayer.currentTime = progressSlider.value;
   updatingProgress = false;
+  sliderIsChanging = false;
 }
 
 /**
@@ -162,9 +192,9 @@ function clickPreviousFunction() {
 function updateFunction() {
   // find image related to specific character
   // Images are 0,1,2 so image sources -1 to each character counter to select correct image
-  coverImage.src = songImageSource[songCounter - 1];
-  songText.innerHTML = songName[songCounter - 1];
-  audioPlayer.src = songSource[songCounter - 1];
+  coverImage.src = songsInfo[songCounter -1].imageSource;
+  songText.innerHTML = songsInfo[songCounter -1].title;
+  audioPlayer.src = songsInfo[songCounter -1].audioSource;
 
   if (playing) {
     audioPlayer.play();
@@ -183,6 +213,7 @@ audioPlayer.onended = onEnd;
 
 //volume slider events
 volumeSlider.onchange = onVolumeSliderChange;
+volumeSlider.onmousedown = onVolumeMousedown;
 
 // progress slider events
 progressSlider.onchange = onProgressSliderChange;
