@@ -7,19 +7,20 @@
   <link rel="stylesheet" href="/style.css" />
   <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
   <script src="/audio-player.js" defer></script>
+  <script src="/drag-and-drop.js" defer></script>
   <style>
     @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
   </style>
   <title>STRUGGLING</title>
 </head>
 
-<body>
+<body id="">
   <!-- main container div -->
   <div id="main-container" class="vertical-container">
 
 
     <!-- audio player container -->
-    <div id="audio-container" class="vertical-container justify-space-around">
+    <div draggable="true" id="audio-container" class="vertical-container justify-space-around">
       <!-- audio player title -->
       <h1 id="title-style">Pokemon Theme Song Player!</h1>
       <!-- song name & artist -->

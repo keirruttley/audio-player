@@ -98,7 +98,9 @@ function onProgressMouseDown() {
 }
 
 /**
- * onProgressSliderChange updates the currentTime of the audioPlayer to the value of the progressSlider and updatingProgress to false, to mark the user is not moving the slider anymore
+ * onProgressSliderChange updates the currentTime of the audioPlayer
+ * to the value of the progressSlider and updatingProgress to false,
+ * to mark the user is not moving the slider anymore
  */
 function onProgressSliderChange() {
   audioPlayer.currentTime = progressSlider.value;

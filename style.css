@@ -42,6 +42,7 @@
     background-color: #ffde00;
     margin-top: 10px;
     border: black solid 4px;
+    position: relative;
   }
   
   /* cover image height and width */
@@ -49,3 +50,4 @@
     height: 200px;
     width: 200px;
   }
+
