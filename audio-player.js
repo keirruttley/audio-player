@@ -14,20 +14,22 @@ const volumeSlider = document.getElementById("volume-slider");
 const progressText = document.getElementById("progress-text");
 const durationText = document.getElementById("duration-text");
 
+
 // song source
 const songSource = ["/assests/songs/pokemon-theme-1.mp3", "/assests/songs/pokemon-theme-2.mp3", "/assests/songs/pokemon-theme-3.mp3"];
-
 // define text for song of choice
 const songName = ["Gotta Catch 'Em all! by Pokemon", "Adventures in the Orange Islands by Pokemon", "The Johto Journeys by Pokemon"];
-
 // image sources
 const songImageSource = ["/assests/images/theme-1.jpg", "/assests/images/theme-2.jpg", "/assests/images/theme-3.jpg"]
 const coverImage = document.getElementById("cover-img");
+
+
 
 // define html element constants - song selection
 const nextButton = document.getElementById("next-button");
 const previousButton = document.getElementById("previous-button");
 const songText = document.getElementById("song-text");
+
 
 // all information about songs - using objects instead of arrays
 const songsInfo = [
@@ -173,7 +175,6 @@ function clickNextFunction() {
   if (songCounter > 3) {
     songCounter = 1;
   }
-
   updateFunction();
 }
 
@@ -185,17 +186,16 @@ function clickPreviousFunction() {
   if (songCounter < 1) {
     songCounter = 3;
   }
-
   updateFunction();
 }
 
 function updateFunction() {
   // find image related to specific character
   // Images are 0,1,2 so image sources -1 to each character counter to select correct image
+  // these is where the objects are stored
   coverImage.src = songsInfo[songCounter -1].imageSource;
   songText.innerHTML = songsInfo[songCounter -1].title;
   audioPlayer.src = songsInfo[songCounter -1].audioSource;
-
   if (playing) {
     audioPlayer.play();
   }

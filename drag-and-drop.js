@@ -37,5 +37,4 @@ function onDragStart(event) {
 
 dropZone.ondrop = onDrop;
 dropZone.ondragover = onDragOver;
-
 moveAudioPlayer.ondragstart = onDragStart;
