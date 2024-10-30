@@ -1,27 +1,27 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Pokemon Solid', sans-serif;
-  }
-  
-  /* display items with flex and center vertically & horizontally */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* container properties + arrange items vertically */
-  .vertical-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .justify-space-around {
-    justify-content: space-evenly;
-  }
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Pokemon Solid', sans-serif;
+}
+
+/* display items with flex and center vertically & horizontally */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* container properties + arrange items vertically */
+.vertical-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.justify-space-around {
+  justify-content: space-evenly;
+}
 
 #title-style {
   font-size: 40px;
@@ -29,31 +29,30 @@
   color: #3b4cca;
 }
 
-  #main-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffde00;
- 
-  }
-  
-  /* stiles for the audio container player */
-  #audio-container {
-    height: 400px;
-    width: 700px;
-    background-color: #ffde00;
-    margin-top: 10px;
-    position: relative;
-    /* background image allows us to select a image and have it cover our background */
-    background-image: url(/assests/background-image/cassette-background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+#main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffde00;
 
-  
-  /* cover image height and width */
-  #cover-img {
-    height: 175px;
-    width: 175px;
-  }
+}
 
+/* stiles for the audio container player */
+#audio-container {
+  height: 400px;
+  width: 700px;
+  background-color: #ffde00;
+  margin-top: 10px;
+  position: relative;
+  /* background image allows us to select a image and have it cover our background */
+  background-image: url(/assests/background-image/cassette-background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* cover image height and width */
+#cover-img {
+  height: 175px;
+  width: 175px;
+}
