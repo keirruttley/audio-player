@@ -18,7 +18,7 @@ const durationText = document.getElementById("duration-text");
 // song source
 const songSource = ["/assests/songs/pokemon-theme-1.mp3", "/assests/songs/pokemon-theme-2.mp3", "/assests/songs/pokemon-theme-3.mp3"];
 // define text for song of choice
-const songName = ["Gotta Catch 'Em all! by Pokemon", "Adventures in the Orange Islands by Pokemon", "The Johto Journeys by Pokemon"];
+const songName = ["Gotta Catch 'Em all!", "Adventures in the Orange Islands", "The Johto Journeys"];
 // image sources
 const songImageSource = ["/assests/images/theme-1.jpg", "/assests/images/theme-2.jpg", "/assests/images/theme-3.jpg"]
 const coverImage = document.getElementById("cover-img");

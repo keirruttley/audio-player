@@ -5,7 +5,7 @@
 }
 
 /* display items with flex and center vertically & horizontally */
-.container {
+#container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,37 @@
 #title-style {
   font-size: 40px;
   font-family: 'Pokemon Solid', sans-serif;
-  color: #3b4cca;
+  color: #ffde00 ;
+  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+#song-text {
+  color: #ffde00;
+  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+}
+
+#progress-text {
+  color: #ffde00;
+  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+
+}
+
+#duration-text {
+  color: #ffde00;
+  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+
+}
+
+#progress-slider {
+  accent-color: #cc0000;
+}
+
+#volume-slider {
+  accent-color: #cc0000;
 }
 
 #main-container {
@@ -39,15 +69,17 @@
 /* stiles for the audio container player */
 #audio-container {
   height: 400px;
-  width: 700px;
+  width: 600px;
   background-color: #ffde00;
   margin-top: 10px;
   position: relative;
-  /* background image allows us to select a image and have it cover our background */
+  border: solid 10px #cc0000;
+  background-color:  #3b4cca;
+  /* background image allows us to select a image and have it cover our background
   background-image: url(/assests/background-image/cassette-background.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 
 
@@ -56,3 +88,5 @@
   height: 175px;
   width: 175px;
 }
+
+
