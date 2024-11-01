@@ -40,12 +40,12 @@ const songsInfo = [
   },
   {
     audioSource: "/assests/songs/pokemon-theme-2.mp3",
-    title: "Adventures in the Orange Islands by Pokemon",
+    title: "Adventures in the Orange Islands",
     imageSource: "/assests/images/theme-2.jpg",
   },
   {
     audioSource: "/assests/songs/pokemon-theme-3.mp3",
-    title: "The Johto Journeys by Pokemon",
+    title: "The Johto Journeys",
     imageSource: "/assests/images/theme-3.jpg",
   }
 ]
