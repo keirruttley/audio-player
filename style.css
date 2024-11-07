@@ -78,9 +78,10 @@
 }
 
 /* display items with flex and center vertically & horizontally */
-#container {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 

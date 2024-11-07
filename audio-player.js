@@ -71,11 +71,11 @@ let sliderIsChanging = false;
 function onPlayPauseClick() {
   if (playing) {
     audioPlayer.pause();
-    playPauseButton.innerHTML = "Play";
+    playPauseButton.innerHTML = "play_arrow";
     playing = false;
   } else {
     audioPlayer.play();
-    playPauseButton.innerHTML = "Pause";
+    playPauseButton.innerHTML = "pause";
     playing = true;
   }
 }
