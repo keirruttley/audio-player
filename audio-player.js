@@ -19,6 +19,7 @@ const nextButton = document.getElementById("next-button");
 const previousButton = document.getElementById("previous-button");
 const songText = document.getElementById("song-text");
 
+const coverImage = document.getElementById("cover-img");
 
 // all information about songs - using objects instead of arrays
 const songsInfo = [
