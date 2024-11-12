@@ -17,11 +17,11 @@
 
 <body>
   <!-- main container div -->
-  <div id="main-container" class="vertical-container">
+  <div id="main-container" class="container">
 
 
     <!-- audio player container -->
-    <div draggable="true" id="audio-container" class="vertical-container justify-space-around">
+    <div draggable="true" id="audio-container" class="container justify-space-around">
       <!-- audio player title -->
       <h1 id="title-style">Pokemon Theme Song Player!</h1>
       <!-- song name & artist -->
@@ -33,12 +33,11 @@
       <!-- volume + play, previous, next buttons + image cover container  -->
       <div class="container justify-space-around">
         <!-- volume -->
-        <div class="container">
-          <input id="volume-slider" type="range" min="0" max="100" />
-        </div>
+        <input id="volume-slider" type="range" min="0" max="100" />
+
 
         <!-- play, previous, next buttons -->
-        <div id="container">
+        <div id="buttons-container" class="container flex-row justify-space-between">
 
           <button id="previous-button"><i class="material-icons">skip_previous</i></button>
 
