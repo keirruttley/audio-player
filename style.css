@@ -59,10 +59,12 @@ body {
   accent-color: #cc0000;
 }
 
+/* color  */
 #volume-slider {
   accent-color: #cc0000;
 }
 
+/* size of the main website */
 #main-container {
   width: 100vw;
   height: 100vh;
@@ -70,7 +72,7 @@ body {
 
 }
 
-/* stiles for the audio container player */
+/* styles for the audio container player */
 #audio-container {
   height: 550px;
   width: 600px;
@@ -87,6 +89,7 @@ body {
   border: 10px solid #3b4cca;
 }
 
+/* buttons height and width */
 #buttons-container {
   width: 100px;
   height: 40px;
