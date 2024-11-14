@@ -183,9 +183,9 @@ function updateFunction() {
   // find image related to specific character
   // Images are 0,1,2 so image sources -1 to each character counter to select correct image
   // these is where the objects are stored
-  coverImage.src = songsInfo[songCounter -1].imageSource;
-  songText.innerHTML = songsInfo[songCounter -1].title;
-  audioPlayer.src = songsInfo[songCounter -1].audioSource;
+  coverImage.src = songsInfo[songCounter - 1].imageSource;
+  songText.innerHTML = songsInfo[songCounter - 1].title;
+  audioPlayer.src = songsInfo[songCounter - 1].audioSource;
   if (playing) {
     audioPlayer.play();
   }

@@ -26,7 +26,7 @@ function onDragStart(event) {
     draggedImage = event.target;
     const style = window.getComputedStyle(draggedImage);
 
-    if(sliderIsChanging) {
+    if (sliderIsChanging) {
         event.preventDefault();
         return;
     }

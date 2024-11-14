@@ -11,31 +11,47 @@ body {
   justify-content: space-evenly;
 }
 
+/* display items with flex and center vertically & horizontally and flex direction column */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
 #title-style {
   font-size: 40px;
   font-family: 'Pokemon Solid', sans-serif;
-  color: #ffde00 ;
+  color: #ffde00;
   text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 
 #song-text {
   color: #ffde00;
   text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 
 #progress-text {
   color: #ffde00;
   text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 
 }
 
 #duration-text {
   color: #ffde00;
   text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 
 }
 
@@ -61,7 +77,7 @@ body {
   margin-top: 10px;
   position: relative;
   border: solid 10px #cc0000;
-  background-color:  #3b4cca;
+  background-color: #3b4cca;
 }
 
 /* cover image height and width */
@@ -69,22 +85,6 @@ body {
   height: 175px;
   width: 175px;
   border: 10px solid #3b4cca;
-}
-
-/* display items with flex and center vertically & horizontally and flex direction column */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.justify-space-between {
-  justify-content: space-between;
 }
 
 #buttons-container {
